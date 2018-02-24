@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         Played
 */
         do {
-            AudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "music", ofType: ".m4a")!))
+            AudioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: "dubstep", ofType: ".m4a")!))
             AudioPlayer.prepareToPlay()
             
 //            Create an Audio Session for the app to play music in background
@@ -54,25 +54,61 @@ class ViewController: UIViewController {
 
     
 //    Play Button
-    @IBAction func play(_ sender: Any) {
+    @IBAction func play(_ sender: UIButton) {
         AudioPlayer.play()
+        
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        UIView.animate(withDuration: 0.3,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.08),
+                       initialSpringVelocity: CGFloat(2.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+        },
+                       completion: { Void in()  }
+        )
     }
 
     
 //    Pause Button
-    @IBAction func pause(_ sender: Any) {
+    @IBAction func pause(_ sender: UIButton) {
         if AudioPlayer.isPlaying == true {
             AudioPlayer.pause()
         } else {
             AudioPlayer.play()
         }
+        
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        UIView.animate(withDuration: 0.3,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.08),
+                       initialSpringVelocity: CGFloat(2.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+        },
+                       completion: { Void in()  }
+        )
     }
     
     
 //    Restart Button
-    @IBAction func restart(_ sender: Any) {
+    @IBAction func restart(_ sender: UIButton) {
         AudioPlayer.currentTime = 0.0
         AudioPlayer.play()
+        
+        sender.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        UIView.animate(withDuration: 0.3,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(0.08),
+                       initialSpringVelocity: CGFloat(2.0),
+                       options: UIViewAnimationOptions.allowUserInteraction,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+        },
+                       completion: { Void in()  }
+        )
     }
     
 //    Slider stuff which makes the slider to change audio time

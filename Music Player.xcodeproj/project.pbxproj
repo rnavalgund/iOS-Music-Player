@@ -15,6 +15,7 @@
 		B0BBA65120415466000A0ECD /* Music_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBA65020415466000A0ECD /* Music_PlayerTests.swift */; };
 		B0BBA65C20415466000A0ECD /* Music_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BBA65B20415466000A0ECD /* Music_PlayerUITests.swift */; };
 		B0BBA66D20415F92000A0ECD /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B0BBA66C20415F7C000A0ECD /* music.m4a */; };
+		B0BBA66F20419A31000A0ECD /* dubstep.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B0BBA66E20419A1B000A0ECD /* dubstep.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B0BBA65B20415466000A0ECD /* Music_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_PlayerUITests.swift; sourceTree = "<group>"; };
 		B0BBA65D20415466000A0ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0BBA66C20415F7C000A0ECD /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
+		B0BBA66E20419A1B000A0ECD /* dubstep.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dubstep.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		B0BBA66B20415F5F000A0ECD /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				B0BBA66E20419A1B000A0ECD /* dubstep.m4a */,
 				B0BBA66C20415F7C000A0ECD /* music.m4a */,
 			);
 			path = Music;
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0BBA66F20419A31000A0ECD /* dubstep.m4a in Resources */,
 				B0BBA66D20415F92000A0ECD /* music.m4a in Resources */,
 				B0BBA64620415466000A0ECD /* LaunchScreen.storyboard in Resources */,
 				B0BBA64320415466000A0ECD /* Assets.xcassets in Resources */,
