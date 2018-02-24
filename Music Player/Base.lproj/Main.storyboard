@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4096" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Music Player-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" title="Music Player" wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Music_Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-J4-hfH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFz-9h-Q5F">
+                                <rect key="frame" x="145" y="422" width="30" height="30"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <viewLayoutGuide key="safeArea" id="iBi-bi-oWy"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRT-ni-uY3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-KP-e8S">
+                                <rect key="frame" x="16" y="422" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="krM-PK-8fQ"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <viewLayoutGuide key="safeArea" id="cWa-7o-vfF"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0PP-O3-ufw"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Inq-bN-Vb9">
+                                <rect key="frame" x="14" y="326" width="292" height="29"/>
+                                <color key="tintColor" red="0.30831962823867798" green="0.20198222994804382" blue="0.71120232343673706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="tBv-3O-mcQ"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <viewLayoutGuide key="safeArea" id="He9-XA-njb"/>
+                                <connections>
+                                    <action selector="SliderFunc:" destination="BYZ-38-t0r" eventType="valueChanged" id="cRh-q1-K21"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txv-2O-UJp">
+                                <rect key="frame" x="274" y="422" width="30" height="30"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <viewLayoutGuide key="safeArea" id="2Tg-l2-sjy"/>
+                                <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gT1-B1-oNK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yuw-J4-hfH" firstAttribute="centerX" secondItem="EFz-9h-Q5F" secondAttribute="centerX" id="1uB-jX-4aV"/>
+                            <constraint firstItem="Inq-bN-Vb9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2wI-kK-LpT"/>
+                            <constraint firstItem="txv-2O-UJp" firstAttribute="leading" secondItem="EFz-9h-Q5F" secondAttribute="trailing" constant="99" id="3Zu-CB-zMK"/>
+                            <constraint firstItem="Yuw-J4-hfH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Bu-Lj-20a"/>
+                            <constraint firstItem="P5c-KP-e8S" firstAttribute="top" secondItem="Inq-bN-Vb9" secondAttribute="bottom" constant="68" id="CPR-gK-rPk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P5c-KP-e8S" secondAttribute="bottom" constant="116" id="DfF-Gx-RGi"/>
+                            <constraint firstItem="P5c-KP-e8S" firstAttribute="bottom" secondItem="EFz-9h-Q5F" secondAttribute="bottom" id="Fke-6c-luq"/>
+                            <constraint firstItem="EFz-9h-Q5F" firstAttribute="leading" secondItem="P5c-KP-e8S" secondAttribute="trailing" constant="99" id="J2h-Sg-ywt"/>
+                            <constraint firstItem="Inq-bN-Vb9" firstAttribute="trailing" secondItem="txv-2O-UJp" secondAttribute="trailing" id="OF4-Ib-aZw"/>
+                            <constraint firstAttribute="trailing" secondItem="Yuw-J4-hfH" secondAttribute="trailing" id="Pac-wN-tXa"/>
+                            <constraint firstItem="Yuw-J4-hfH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SrW-80-FmB"/>
+                            <constraint firstItem="Inq-bN-Vb9" firstAttribute="leading" secondItem="P5c-KP-e8S" secondAttribute="leading" id="XBx-XZ-HWl"/>
+                            <constraint firstItem="Inq-bN-Vb9" firstAttribute="centerX" secondItem="EFz-9h-Q5F" secondAttribute="centerX" id="h6g-4n-rqO"/>
+                            <constraint firstItem="EFz-9h-Q5F" firstAttribute="top" secondItem="txv-2O-UJp" secondAttribute="top" id="hNH-n4-pD6"/>
+                            <constraint firstItem="P5c-KP-e8S" firstAttribute="top" secondItem="EFz-9h-Q5F" secondAttribute="top" id="lti-pS-EkZ"/>
+                            <constraint firstItem="Inq-bN-Vb9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="306" id="pAf-Qx-Jxi"/>
+                            <constraint firstItem="Yuw-J4-hfH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qvG-OP-gy4"/>
+                            <constraint firstItem="EFz-9h-Q5F" firstAttribute="bottom" secondItem="txv-2O-UJp" secondAttribute="bottom" id="yUo-po-Mzn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="Inq-bN-Vb9" id="rOl-A3-OMV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="121.47887323943662"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Group 4" width="1080" height="1920"/>
+        <image name="pause" width="150" height="166"/>
+        <image name="play" width="200" height="200"/>
+        <image name="restart" width="197" height="199"/>
+    </resources>
+</document>
